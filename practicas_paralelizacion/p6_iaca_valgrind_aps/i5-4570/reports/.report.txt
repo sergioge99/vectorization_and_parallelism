@@ -1,0 +1,1 @@
+./comp.omp.sh: línea 114: dummy.o: no se encontró la orden

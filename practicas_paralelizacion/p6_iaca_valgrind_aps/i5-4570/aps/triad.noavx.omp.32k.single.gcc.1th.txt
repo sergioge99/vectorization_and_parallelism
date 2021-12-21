@@ -1,0 +1,58 @@
+triad kernel, LEN: 32768, NTIMES: 491520
+
+                     Time    TPI
+              Loop    ns     ps/it     Checksum 
+             triad  17760.5    542.0     65810.000000 
+100.00%           100.00%            22.16% 26.64% 29.10% 32.91% 34.48% 35.97% 37.24%100.00%             0.00%             0.00%  1.89%  3.77%  5.66%  7.55%  9.43% 11.32% 13.21% 15.09% 16.98% 18.87% 20.75% 22.64% 24.53% 26.42% 28.30% 30.19% 32.08% 33.96% 35.85% 37.74% 39.62% 41.51% 43.40% 45.28% 47.17% 49.06% 50.94% 52.83% 54.72% 56.60% 58.49% 60.38% 62.26% 64.15% 66.04% 67.92% 69.81% 71.70% 73.58% 75.47% 77.36% 79.25% 81.13% 83.02% 84.91% 86.79% 88.68% 90.57% 92.45% 94.34% 96.23% 98.11%             0.00%                        0.00%             0.00%                                   0.00%             0.00%             0.00%                                                                  | Summary information
+|--------------------------------------------------------------------
+  Application                : triad.noavx.omp.32k.single.gcc
+  Report creation date       : 2020-06-01 19:14:20
+  HW Platform                : Intel(R) Core(TM) Processor code named Haswell
+  Logical core count per node: 4
+  Collector type             : Driverless Perf per-process counting
+  Used statistics            : aps_result_20200601
+|
+| Your application is memory bound.
+| Use memory access analysis tools like Intel(R) VTune(TM) Amplifier for a  detailed metric breakdown by memory hierarchy, memory bandwidth, and correlation by memory objects.
+|
+  Elapsed time:                9.02 sec
+  CPI Rate:                    0.32
+  CPU Utilization:                               24.00%
+| Your application might underutilize the available logical CPU cores because of
+| insufficient parallel work, blocking on synchronization, or too much I/O.
+| Perform function or source line-level profiling with tools like Intel(R)
+| VTune(TM) Amplifier to discover why the CPU is underutilized.
+    Average CPU Utilization:                      0.96   Out of    4 logical CPUs
+  Memory Stalls:                             100.00% of pipeline slots
+| The metric value can indicate that a significant fraction of execution
+| pipeline slots could be stalled due to demand memory load and stores. See the
+| second level metrics to define if the application is cache- or DRAM-bound and
+| the NUMA efficiency. Use Intel(R) VTune(TM) Amplifier Memory Access analysis
+| to review a detailed metric breakdown by memory hierarchy, memory bandwidth
+| information, and correlation by memory objects.
+    Cache Stalls:                            100.00% of cycles
+| A significant proportion of cycles are spent on data fetches from cache. Use
+| Intel(R) VTune(TM) Amplifier Memory Access analysis to see if accesses to L2
+| or L3 cache are problematic and consider applying the same performance tuning
+| as you would for a cache-missing workload. This may include reducing the data
+| working set size, improving data access locality, blocking or partitioning the
+| working set to fit in the lower cache levels, or exploiting hardware
+| prefetchers.
+    DRAM Stalls:                               0.10% of cycles
+    Average DRAM Bandwidth:        Not Available
+| Data for this metric is not collected since it requires system-wide
+| performance monitoring. Make sure the sampling driver is properly installed on
+| your system: https://software.intel.com/en-us/vtune-amplifier-help-sep-driver.
+| Otherwise, enable a driverless Perf-based sampling collection by setting the
+| /proc/sys/kernel/perf_even_paranoid value to 0 or less.
+ Disk I/O Bound:             0.17 sec ( 1.88 %)
+       Data read:             0.4  KB
+       Data written:          0.0  KB
+| This application actively uses I/O operations. Consider changing the
+| application algorithm or using a faster storage device.
+ Memory Footprint:
+  Resident:         39.71 MB
+  Virtual:          56.69 MB
+
+Graphical representation of this data is available in the HTML report: /home/a755844/MULTIS/p6/i5-4570/aps_report_20200601_191435.html
+  0.00%             0.00%  1.89%  3.77%  5.66%  7.55%  9.43% 11.32% 13.21% 15.09% 16.98% 18.87% 20.75% 22.64% 24.53% 26.42% 28.30% 30.19% 32.08% 33.96% 35.85% 37.74% 39.62% 41.51% 43.40% 45.28% 47.17% 49.06% 50.94% 52.83% 54.72% 56.60% 58.49% 60.38% 62.26% 64.15% 66.04% 67.92% 69.81% 71.70% 73.58% 75.47% 77.36% 79.25% 81.13% 83.02% 84.91% 86.79% 88.68% 90.57% 92.45% 94.34% 96.23% 98.11%           

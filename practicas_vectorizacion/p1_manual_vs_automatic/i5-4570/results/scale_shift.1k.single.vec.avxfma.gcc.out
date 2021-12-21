@@ -1,0 +1,5 @@
+                     Time    TPI
+              Loop    ns     ps/el     Checksum 
+       scale_shift   66.8     65.3     5119.999512 
+       ss_intr_SSE  122.5    119.6     5119.999512 
+       ss_intr_AVX   66.8     65.2     5119.999512 

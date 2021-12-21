@@ -1,0 +1,6 @@
+../ss_alias.c:109:5: optimized: loop vectorized using 32 byte vectors
+../ss_alias.c:109:5: optimized:  loop versioned for vectorization because of possible aliasing
+../ss_alias.c:131:5: optimized: loop vectorized using 32 byte vectors
+../ss_alias.c:154:5: optimized: loop vectorized using 32 byte vectors
+../ss_alias.c:178:5: optimized: loop vectorized using 32 byte vectors
+../ss_alias.c:200:5: optimized: loop vectorized using 32 byte vectors

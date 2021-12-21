@@ -1,0 +1,1 @@
+../ss_stride.c:139:5: optimized: loop vectorized using 32 byte vectors

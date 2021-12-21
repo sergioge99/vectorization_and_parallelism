@@ -1,0 +1,12 @@
+                     Time       TPI
+             Loop     ns       ps/el     Checksum
+       ss_alias_v1  3954.1    3861.4     5093.000000 
+       ss_alias_v1   480.8     469.5     5093.000000 
+       ss_alias_v1   480.8     469.5     5119.999512 
+       ss_alias_v1    78.8      77.0     2355.224365 
+       ss_alias_v2    92.3      90.1     2355.224365 
+       ss_alias_v2    78.3      76.4     2355.224365 
+       ss_alias_v3    92.3      90.1     2355.224365 
+       ss_alias_v3    78.3      76.4     2355.224365 
+       ss_alias_v4    78.3      76.4     2355.224365 
+   scale_and_shift    76.1      74.3     2355.224365 

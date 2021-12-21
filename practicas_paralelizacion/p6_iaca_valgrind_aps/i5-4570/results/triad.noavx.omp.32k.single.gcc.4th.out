@@ -1,0 +1,5 @@
+triad kernel, LEN: 32768, NTIMES: 480
+
+                     Time    TPI
+              Loop    ns     ps/it     Checksum 
+             triad  5752.3    175.5     65810.000000 

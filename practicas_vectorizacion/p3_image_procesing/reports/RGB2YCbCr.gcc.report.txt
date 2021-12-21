@@ -1,0 +1,10 @@
+RGB2YCbCr.c:174:9: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:229:9: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:285:9: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:419:9: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:407:5: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:501:9: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:492:9: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:612:13: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:592:13: optimized: loop vectorized using 32 byte vectors
+RGB2YCbCr.c:584:13: optimized: loop vectorized using 32 byte vectors

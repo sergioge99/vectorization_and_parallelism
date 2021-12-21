@@ -1,0 +1,20 @@
+==17570== Callgrind, a call-graph generating cache profiler
+==17570== Copyright (C) 2002-2017, and GNU GPL'd, by Josef Weidendorfer et al.
+==17570== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==17570== Command: ./triad.noavx.omp.32k.single.gcc
+==17570== 
+==17570== For interactive control, run 'callgrind_control -h'.
+triad kernel, LEN: 32768, NTIMES: 480
+
+                     Time    TPI
+              Loop    ns     ps/it     Checksum 
+             triad  987875.0    30147.6     65810.000000 
+==17570== 
+==17570== Events    : Ir Bc Bcm Bi Bim
+==17570== Collected : 95366360 15908817 1078 2928 35
+==17570== 
+==17570== I   refs:      95,366,360
+==17570== 
+==17570== Branches:      15,911,745  (15,908,817 cond + 2,928 ind)
+==17570== Mispredicts:        1,113  (     1,078 cond +    35 ind)
+==17570== Mispred rate:         0.0% (       0.0%     +   1.2%   )

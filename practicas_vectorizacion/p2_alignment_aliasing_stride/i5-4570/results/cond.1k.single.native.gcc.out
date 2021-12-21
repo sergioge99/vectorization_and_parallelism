@@ -1,0 +1,4 @@
+                      Time      TPI
+         Loop          ns      ps/el      Checksum
+          cond_esc   573.0     559.6     511.694611 
+          cond_vec    89.6      87.5     511.694611 

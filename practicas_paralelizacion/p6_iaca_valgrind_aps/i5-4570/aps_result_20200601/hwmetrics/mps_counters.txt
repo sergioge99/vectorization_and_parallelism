@@ -1,0 +1,25 @@
+Intel(R) VTune(TM) Amplifier summary
+Number of nodes;1
+
+/usr/local/pkg/APS_2018_update2_lin_551022/internal/bin64/amplxe-cl -R summary -r aps_result_20200601/hwmetrics/results.lab102-200,-1.* -q -format csv -csv-delimiter semicolon
+Hierarchy Level;Metric Name;Metric Value
+0;Elapsed Time;1.588775
+0;SP GFLOPS;Not supported for this CPU.
+0;CPI Rate;0.670083
+0;Effective CPU Utilization;82.5
+1;Average Effective CPU Utilization;3.299 out of 4
+0;Memory Bound;100.0
+1;Cache Bound;99.4
+1;DRAM Bound;0.3
+0;Collection and Platform Info;
+1;Application Command Line;./triad.avx.omp.32k.single.gcc "4" 
+1;Operating System;"3.10.0-957.5.1.el7.x86_64 NAME="CentOS Linux" VERSION="7 (Core)" ID="centos" ID_LIKE="rhel fedora" VERSION_ID="7" PRETTY_NAME="CentOS Linux 7 (Core)" ANSI_COLOR="0;31" CPE_NAME="cpe:/o:centos:centos:7" HOME_URL="https://www.centos.org/" BUG_REPORT_URL="https://bugs.centos.org/"  CENTOS_MANTISBT_PROJECT="CentOS-7" CENTOS_MANTISBT_PROJECT_VERSION="7" REDHAT_SUPPORT_PRODUCT="centos" REDHAT_SUPPORT_PRODUCT_VERSION="7" "
+1;Computer Name;lab102-200
+1;Result Size;2663659
+1;Collection start time;17:15:14 01/06/2020 UTC
+1;Collection stop time;17:15:15 01/06/2020 UTC
+1;Collector Type;Driverless Perf per-process counting
+1;CPU;
+2;Name;Intel(R) Core(TM) Processor code named Haswell
+2;Frequency;3192621317
+2;Logical CPU Count;4

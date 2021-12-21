@@ -1,0 +1,2 @@
+../ss_align.c:107:5: optimized: loop vectorized using 32 byte vectors
+../ss_align.c:128:5: optimized: loop vectorized using 32 byte vectors

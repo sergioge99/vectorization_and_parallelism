@@ -1,0 +1,208 @@
+--------------------------------------------------------------------------------
+Profile data file 'valgrind/callg.profile.triad.avx.omp.32k.single.gcc.1th.txt' (creator: callgrind-3.13.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 2256060
+Trigger: Program termination
+Profiled target:  ./triad.avx.omp.32k.single.gcc (PID 17577, part 1)
+Events recorded:  Ir Bc Bcm Bi Bim
+Events shown:     Ir Bc Bcm Bi Bim
+Event sort order: Ir Bc Bcm Bi Bim
+Thresholds:       99 0 0 0 0
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+        Ir        Bc   Bcm    Bi Bim 
+--------------------------------------------------------------------------------
+22,630,278 2,147,180 1,065 2,928  35  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+        Ir        Bc   Bcm    Bi Bim  file:function
+--------------------------------------------------------------------------------
+
+22,630,278 2,147,180 1,065 2,928  35  *  ../triad.c:main [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+22,630,278 2,147,180 1,065 2,928  35  >   ../triad.c:triad (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+
+22,630,278 2,147,180 1,065 2,928  35  < ???:(below main) (1x) [/usr/lib64/libc-2.17.so]
+22,630,278 2,147,180 1,065 2,928  35  *  /home/a755844/MULTIS/p6/i5-4570/../triad.c:main
+
+22,630,278 2,147,180 1,065 2,928  35  *  ???:(below main) [/usr/lib64/libc-2.17.so]
+22,630,278 2,147,180 1,065 2,928  35  >   /home/a755844/MULTIS/p6/i5-4570/../triad.c:main (1x)
+
+22,630,278 2,147,180 1,065 2,928  35  < ???:0x00000000004006ec (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+22,630,278 2,147,180 1,065 2,928  35  *  ???:_dl_runtime_resolve_xsave [/usr/lib64/ld-2.17.so]
+
+22,630,278 2,147,180 1,065 2,928  35  < ../triad.c:main (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+22,630,278 2,147,180 1,065 2,928  35  *  ../triad.c:triad [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+    53,062     5,312   136    16  13  >   ???:_dl_runtime_resolve_xsave'2 (1x) [/usr/lib64/ld-2.17.so]
+     1,602       249    17     5   4  >   ../triad.c:get_wall_time (2x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+   134,171    33,214    88     8   1  >   ../triad.c:check (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+   474,520   100,576    56     4   3  >   ../triad.c:init (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+21,950,654 2,006,531   525 2,395   3  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:GOMP_parallel (479x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+     5,685       818   240    19   9  >   ../triad.c:results (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+     4,320         .     .     .   .  >   ???:dummy (480x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+
+22,630,278 2,147,180 1,065 2,928  35  < ???:0x0000000000001120 (1x) [/usr/lib64/ld-2.17.so]
+22,630,278 2,147,180 1,065 2,928  35  *  ???:0x00000000004006ec [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+22,630,278 2,147,180 1,065 2,928  35  >   ???:_dl_runtime_resolve_xsave (1x) [/usr/lib64/ld-2.17.so]
+
+22,630,278 2,147,180 1,065 2,928  35  *  ???:0x0000000000001120 [/usr/lib64/ld-2.17.so]
+22,630,278 2,147,180 1,065 2,928  35  >   ???:0x00000000004006ec (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+
+21,950,654 2,006,531   525 2,395   3  < ../triad.c:triad (479x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+21,950,654 2,006,531   525 2,395   3  *  /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:GOMP_parallel [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+   126,248    20,387    42   482   4  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/team.c:gomp_team_end (480x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+    56,160     2,880     6     .   .  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/team.c:gomp_team_start (480x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+    15,360     2,880     7     .   .  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:gomp_resolve_num_threads (480x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+   131,362    16,118    65   484   4  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/team.c:gomp_new_team (480x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+21,655,523 1,968,898   522   964   6  >   /home/a755844/MULTIS/p6/i5-4570/../triad.c:triad._omp_fn.0 (480x)
+
+21,655,523 1,968,898   522   964   6  *  ../triad.c:triad._omp_fn.0 [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+     2,725       419    21     2   2  >   ???:_dl_runtime_resolve_xsave'2 (2x) [/usr/lib64/ld-2.17.so]
+     1,437         .     .     .   .  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:omp_get_thread_num (479x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+     3,353       479     .     .   .  >   /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:omp_get_num_threads (479x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+
+21,655,523 1,968,898   522   964   6  < /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:GOMP_parallel (480x) [/usr/local/gcc/lib64/libgomp.so.1.0.0]
+21,655,523 1,968,898   522   964   6  *  /home/a755844/MULTIS/p6/i5-4570/../triad.c:triad._omp_fn.0
+
+   474,520   100,576    56     4   3  < ../triad.c:triad (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+   474,520   100,576    56     4   3  *  ../triad.c:init [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+    15,744     2,272    27     2   2  >   ???:_dl_runtime_resolve_xsave'2 (1x) [/usr/lib64/ld-2.17.so]
+
+   134,171    33,214    88     8   1  < ../triad.c:triad (1x) [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+   134,171    33,214    88     8   1  *  ../triad.c:check [/home/a755844/MULTIS/p6/i5-4570/triad.avx.omp.32k.single.gcc]
+     3,091       446    82     7   1  >   ???:printf (1x) [/usr/lib64/libc-2.17.so]
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: ../triad.c
+--------------------------------------------------------------------------------
+        Ir        Bc Bcm  Bi Bim 
+
+-- line 62 ----------------------------------------
+         .         .   .   .   .  
+         .         .   .   .   .  /* inhibimos el inlining de algunas funciones
+         .         .   .   .   .   * para que el ensamblador sea más cómodo de leer */
+         .         .   .   .   .  
+         .         .   .   .   .  /* return wall time in seconds */
+         .         .   .   .   .  __attribute__ ((noinline))
+         .         .   .   .   .  double
+         .         .   .   .   .  get_wall_time()
+         2         .   .   .   .  {
+         .         .   .   .   .      struct timeval time;
+        16         2   0   3   2      if (gettimeofday(&time,NULL)) {
+     1,567       247  17   2   2  => ???:_dl_runtime_resolve_xsave'2 (1x)
+         3         .   .   .   .  => ???:0x000000005803d9a3 (1x)
+         .         .   .   .   .          exit(-1); // return 0;
+         .         .   .   .   .      }
+        10         .   .   .   .      return (double)time.tv_sec + (double)time.tv_usec * .000001;
+         4         .   .   .   .  }
+         .         .   .   .   .  
+         .         .   .   .   .  /* inhibimos vectorización en esta función
+         .         .   .   .   .   * para que los informes de compilación sean más cómodos de leer */
+         .         .   .   .   .  __attribute__((optimize("no-tree-vectorize")))
+         .         .   .   .   .  void check(real arr[LEN])
+         .         .   .   .   .  {
+         2         .   .   .   .      real sum = 0;
+    98,305    32,768   6   .   .      for (unsigned int i = 0; i < LEN; i++)
+    32,768         .   .   .   .          sum += arr[i];
+         .         .   .   .   .  
+         5         0   0   1   .      printf("%f \n", sum);
+     3,091       446  82   7   1  => ???:printf (1x)
+         .         .   .   .   .  }
+         .         .   .   .   .  
+         .         .   .   .   .  __attribute__((optimize("no-tree-vectorize")))
+         .         .   .   .   .  __attribute__ ((noinline))
+         .         .   .   .   .  int init()
+         5         .   .   .   .  {
+   196,620    65,536  20   2   1      for (int j = 0; j < LEN; j++)
+    15,744     2,272  27   2   2  => ???:_dl_runtime_resolve_xsave'2 (1x)
+         .         .   .   .   .      {
+    32,768         .   .   .   .  	    a[j] = 1.0;
+    32,768         .   .   .   .  	    b[j] = 2.0;
+         .         .   .   .   .  	    c[j] = 0.0;
+         .         .   .   .   .  	}
+         2         .   .   .   .      b[69] = 69.0;
+         1         .   .   .   .      c[69] = 69.0;
+         .         .   .   .   .  
+    65,537    32,768   9   .   .      for (int j = 0; j < LEN; j++)
+   131,072         .   .   .   .  		a[j] = 2.0E0 * a[j];
+         .         .   .   .   .  
+         .         .   .   .   .    return 0;
+         3         .   .   .   .  }
+         .         .   .   .   .  
+         .         .   .   .   .  __attribute__ ((noinline))
+         .         .   .   .   .  void results(double wall_time, char *loop)
+         1         .   .   .   .  {
+         7         0   0   1   1      printf("%18s  %5.1f    %5.1f     ",
+     5,677       818 240  18   8  => ???:printf (1x)
+         .         .   .   .   .              loop /* loop name */,
+         .         .   .   .   .              wall_time/(1e-9*NTIMES),     /* ns/loop */
+         .         .   .   .   .              wall_time/(1e-12*NTIMES*LEN) /* ps/iteration */);
+         .         .   .   .   .  }
+         .         .   .   .   .  
+         .         .   .   .   .  /* triad functions */
+         .         .   .   .   .  __attribute__ ((noinline))
+         .         .   .   .   .  int
+         .         .   .   .   .  triad()
+         2         .   .   .   .  {
+         .         .   .   .   .      double start_t, end_t;
+         .         .   .   .   .  
+         2         .   .   .   .      init();
+   474,520   100,576  56   4   3  => ../triad.c:init (1x)
+         4         .   .   .   .      start_t = get_wall_time();
+     1,585       248  17   4   3  => ../triad.c:get_wall_time (1x)
+     3,845       480   3 481   2      for (unsigned int nl = 0; nl < NTIMES; nl++)
+    53,062     5,312 136  16  13  => ???:_dl_runtime_resolve_xsave'2 (1x)
+21,950,654 2,006,531 525 2,395   3  => /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:GOMP_parallel (479x)
+         .         .   .   .   .      {
+    18,728     1,440   0 962   4  		#pragma omp parallel for
+     2,725       419  21   2   2  => ???:_dl_runtime_resolve_xsave'2 (2x)
+     1,437         .   .   .   .  => /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:omp_get_thread_num (479x)
+     3,353       479   .   .   .  => /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c:omp_get_num_threads (479x)
+         .         .   .   .   .          for (unsigned int i = 0; i < LEN; i++)
+         .         .   .   .   .          {
+         .         .   .   .   .              IACA_START
+21,629,280 1,966,560 501   .   .              a[i] = b[i] + scalar*c[i];
+         .         .   .   .   .          }
+         .         .   .   .   .          IACA_END
+     2,400         .   .   .   .          dummy(a, b, c, scalar);
+     4,320         .   .   .   .  => ???:dummy (480x)
+         .         .   .   .   .      }
+         2         .   .   .   .      end_t = get_wall_time();
+        17         1   0   1   1  => ../triad.c:get_wall_time (1x)
+         3         .   .   .   .      results(end_t - start_t, "triad");
+     5,685       818 240  19   9  => ../triad.c:results (1x)
+         2         .   .   .   .      check(a);
+   134,171    33,214  88   8   1  => ../triad.c:check (1x)
+         .         .   .   .   .      return 0;
+         4         .   .   .   .  }
+         .         .   .   .   .  
+         .         .   .   .   .  int main()
+         .         .   .   .   .  {
+         .         .   .   .   .    // printf("LEN: %u\n\n", LEN);
+         .         .   .   .   .    printf("triad kernel, LEN: %u, NTIMES: %lu\n\n", LEN, NTIMES);
+         .         .   .   .   .    printf("                     Time    TPI\n");
+         .         .   .   .   .    printf("              Loop    ns     ps/it     Checksum \n");
+         .         .   .   .   .    triad();
+22,630,278 2,147,180 1,065 2,928  35  => ../triad.c:triad (1x)
+-- line 150 ----------------------------------------
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/a755844/MULTIS/p6/i5-4570/../triad.c
+--------------------------------------------------------------------------------
+  No information has been collected for /home/a755844/MULTIS/p6/i5-4570/../triad.c
+
+--------------------------------------------------------------------------------
+The following files chosen for auto-annotation could not be found:
+--------------------------------------------------------------------------------
+  /root/soft/gcc/obj/x86_64-pc-linux-gnu/libgomp/../../../gcc-9.2.0/libgomp/parallel.c
+
+--------------------------------------------------------------------------------
+Ir Bc Bcm Bi Bim 
+--------------------------------------------------------------------------------
+98 98  51 50  29  percentage of events annotated
+

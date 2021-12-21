@@ -1,0 +1,7 @@
+../ss_align.c:107:5: note: loop vectorized
+../ss_align.c:128:5: note: loop vectorized
+../ss_align.c:128:5: note: loop turned into non-loop; it never loops.
+../ss_align.c:128:5: note: loop with 7 iterations completely unrolled
+../ss_align.c:120:5: note: loop turned into non-loop; it never loops.
+../ss_align.c:120:5: note: loop with 7 iterations completely unrolled
+../ss_align.c:130:16: note: basic block vectorized

@@ -1,0 +1,4 @@
+../triad.c: En la función 'triad':
+../triad.c:129: aviso: se descarta el #pragma omp parallel [-Wunknown-pragmas]
+  129 |   #pragma omp parallel for
+      | 

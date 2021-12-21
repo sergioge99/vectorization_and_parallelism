@@ -1,0 +1,130 @@
+--------------------------------------------------------------------------------
+I1 cache:         32768 B, 64 B, 8-way associative
+D1 cache:         32768 B, 64 B, 8-way associative
+LL cache:         6291456 B, 64 B, 12-way associative
+Command:          ./triad.noavx.omp.32k.single.gcc
+Data file:        valgrind/cacheg.profile.triad.noavx.omp.32k.single.gcc.1th.txt
+Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
+Thresholds:       0.1 100 100 100 100 100 100 100 100
+Include dirs:     
+User annotated:   
+Auto-annotation:  on
+
+--------------------------------------------------------------------------------
+        Ir  I1mr  ILmr         Dr      D1mr  DLmr         Dw    D1mw  DLmw 
+--------------------------------------------------------------------------------
+95,731,328 1,447 1,379 31,725,663 1,992,412 2,680 15,964,833 997,369 6,922  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+        Ir I1mr ILmr         Dr      D1mr DLmr         Dw    D1mw  DLmw  file:function
+--------------------------------------------------------------------------------
+94,382,880    1    1 31,458,720 1,966,560    0 15,730,080 983,040     0  /home/a755844/MULTIS/p6/i5-4570/../triad.c:triad._omp_fn.0
+   458,771    3    3     32,773     2,051    0     98,308   4,099 4,096  /home/a755844/MULTIS/p6/i5-4570/../triad.c:init
+   136,857    3    3     33,251     2,530    0        967       2     0  /home/a755844/MULTIS/p6/i5-4570/../triad.c:triad
+    98,343   19   18     30,079       733  264     13,058      19     3  ???:do_lookup_x
+
+--------------------------------------------------------------------------------
+-- Auto-annotated source: /home/a755844/MULTIS/p6/i5-4570/../triad.c
+--------------------------------------------------------------------------------
+        Ir I1mr ILmr         Dr      D1mr DLmr         Dw    D1mw  DLmw 
+
+-- line 62 ----------------------------------------
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  /* inhibimos el inlining de algunas funciones
+         .    .    .          .         .    .          .       .     .   * para que el ensamblador sea más cómodo de leer */
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  /* return wall time in seconds */
+         .    .    .          .         .    .          .       .     .  __attribute__ ((noinline))
+         .    .    .          .         .    .          .       .     .  double
+         .    .    .          .         .    .          .       .     .  get_wall_time()
+         2    1    1          0         0    0          0       0     0  {
+         .    .    .          .         .    .          .       .     .      struct timeval time;
+        10    0    0          0         0    0          2       0     0      if (gettimeofday(&time,NULL)) {
+         .    .    .          .         .    .          .       .     .          exit(-1); // return 0;
+         .    .    .          .         .    .          .       .     .      }
+        10    1    1          6         1    0          0       0     0      return (double)time.tv_sec + (double)time.tv_usec * .000001;
+         4    0    0          2         0    0          0       0     0  }
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  /* inhibimos vectorización en esta función
+         .    .    .          .         .    .          .       .     .   * para que los informes de compilación sean más cómodos de leer */
+         .    .    .          .         .    .          .       .     .  __attribute__((optimize("no-tree-vectorize")))
+         .    .    .          .         .    .          .       .     .  void check(real arr[LEN])
+         .    .    .          .         .    .          .       .     .  {
+         2    0    0          0         0    0          0       0     0      real sum = 0;
+    98,305    0    0          0         0    0          0       0     0      for (unsigned int i = 0; i < LEN; i++)
+    32,768    0    0     32,768     2,048    0          0       0     0          sum += arr[i];
+         .    .    .          .         .    .          .       .     .  
+         4    0    0          0         0    0          1       1     0      printf("%f \n", sum);
+         .    .    .          .         .    .          .       .     .  }
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  __attribute__((optimize("no-tree-vectorize")))
+         .    .    .          .         .    .          .       .     .  __attribute__ ((noinline))
+         .    .    .          .         .    .          .       .     .  int init()
+         5    1    1          1         0    0          1       0     0  {
+   196,615    1    1          1         1    0          1       1     0      for (int j = 0; j < LEN; j++)
+         .    .    .          .         .    .          .       .     .      {
+    32,768    0    0          0         0    0     32,768   2,048 2,048  	    a[j] = 1.0;
+    32,768    0    0          0         0    0     32,768   2,048 2,048  	    b[j] = 2.0;
+         .    .    .          .         .    .          .       .     .  	    c[j] = 0.0;
+         .    .    .          .         .    .          .       .     .  	}
+         2    0    0          1         1    0          1       1     0      b[69] = 69.0;
+         1    1    1          0         0    0          1       1     0      c[69] = 69.0;
+         .    .    .          .         .    .          .       .     .  
+    65,537    0    0          0         0    0          0       0     0      for (int j = 0; j < LEN; j++)
+   131,072    0    0     32,768     2,048    0     32,768       0     0  		a[j] = 2.0E0 * a[j];
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .    return 0;
+         3    0    0          2         1    0          0       0     0  }
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  __attribute__ ((noinline))
+         .    .    .          .         .    .          .       .     .  void results(double wall_time, char *loop)
+         1    0    0          0         0    0          0       0     0  {
+         6    0    0          2         0    0          0       0     0      printf("%18s  %5.1f    %5.1f     ",
+         .    .    .          .         .    .          .       .     .              loop /* loop name */,
+         .    .    .          .         .    .          .       .     .              wall_time/(1e-9*NTIMES),     /* ns/loop */
+         .    .    .          .         .    .          .       .     .              wall_time/(1e-12*NTIMES*LEN) /* ps/iteration */);
+         .    .    .          .         .    .          .       .     .  }
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  /* triad functions */
+         .    .    .          .         .    .          .       .     .  __attribute__ ((noinline))
+         .    .    .          .         .    .          .       .     .  int
+         .    .    .          .         .    .          .       .     .  triad()
+         2    1    1          0         0    0          1       0     0  {
+         .    .    .          .         .    .          .       .     .      double start_t, end_t;
+         .    .    .          .         .    .          .       .     .  
+         2    0    0          0         0    0          1       0     0      init();
+         4    0    0          0         0    0          2       1     0      start_t = get_wall_time();
+     3,361    1    1          0         0    0        480       0     0      for (unsigned int nl = 0; nl < NTIMES; nl++)
+         .    .    .          .         .    .          .       .     .      {
+    11,040    1    1      1,440       480    0      1,440       0     0  		#pragma omp parallel for
+         .    .    .          .         .    .          .       .     .          for (unsigned int i = 0; i < LEN; i++)
+         .    .    .          .         .    .          .       .     .          {
+         .    .    .          .         .    .          .       .     .              IACA_START
+94,371,840    0    0 31,457,280 1,966,080    0 15,728,640 983,040     0              a[i] = b[i] + scalar*c[i];
+         .    .    .          .         .    .          .       .     .          }
+         .    .    .          .         .    .          .       .     .          IACA_END
+     2,400    0    0        480       480    0        480       0     0          dummy(a, b, c, scalar);
+         .    .    .          .         .    .          .       .     .      }
+         2    0    0          0         0    0          1       0     0      end_t = get_wall_time();
+         3    1    1          1         1    0          1       0     0      results(end_t - start_t, "triad");
+         .    .    .          .         .    .          .       .     .      check(a);
+         .    .    .          .         .    .          .       .     .      return 0;
+         4    0    0          2         1    0          0       0     0  }
+         .    .    .          .         .    .          .       .     .  
+         .    .    .          .         .    .          .       .     .  int main()
+         1    1    1          0         0    0          0       0     0  {
+         .    .    .          .         .    .          .       .     .    // printf("LEN: %u\n\n", LEN);
+         5    0    0          0         0    0          1       0     0    printf("triad kernel, LEN: %u, NTIMES: %lu\n\n", LEN, NTIMES);
+         2    0    0          0         0    0          1       0     0    printf("                     Time    TPI\n");
+         2    0    0          0         0    0          1       0     0    printf("              Loop    ns     ps/it     Checksum \n");
+         2    0    0          0         0    0          1       0     0    triad();
+         2    0    0          0         0    0          1       0     0    exit(0);
+         .    .    .          .         .    .          .       .     .  }
+
+--------------------------------------------------------------------------------
+Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw 
+--------------------------------------------------------------------------------
+99    1    1 99   99    0 99   99   59  percentage of events annotated
+

@@ -1,0 +1,27 @@
+==17580== Cachegrind, a cache and branch-prediction profiler
+==17580== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
+==17580== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==17580== Command: ./triad.avx.omp.32k.single.gcc
+==17580== 
+--17580-- warning: L3 cache found, using its data for the LL simulation.
+triad kernel, LEN: 32768, NTIMES: 480
+
+                     Time    TPI
+              Loop    ns     ps/it     Checksum 
+             triad  253453.9    7734.8     65810.000000 
+==17580== 
+==17580== I   refs:      22,995,208
+==17580== I1  misses:         1,452
+==17580== LLi misses:         1,383
+==17580== I1  miss rate:       0.01%
+==17580== LLi miss rate:       0.01%
+==17580== 
+==17580== D   refs:      12,301,887  (8,133,111 rd   + 4,168,776 wr)
+==17580== D1  misses:     2,990,263  (1,993,374 rd   +   996,889 wr)
+==17580== LLd misses:         9,603  (    2,681 rd   +     6,922 wr)
+==17580== D1  miss rate:       24.3% (     24.5%     +      23.9%  )
+==17580== LLd miss rate:        0.1% (      0.0%     +       0.2%  )
+==17580== 
+==17580== LL refs:        2,991,715  (1,994,826 rd   +   996,889 wr)
+==17580== LL misses:         10,986  (    4,064 rd   +     6,922 wr)
+==17580== LL miss rate:         0.0% (      0.0%     +       0.2%  )
